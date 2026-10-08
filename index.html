@@ -932,7 +932,7 @@ function renderCart(){
   $("#cartCount").textContent=count; $("#cartTotal").textContent=inr(total);
   list.innerHTML = cart.length ? cart.map((i,idx)=>`
     <li class="line-item">
-      <img src="${IMG[i.img]}" alt="">
+      <img src="${IMG[i.img]||i.thumb||''}" alt="">
       <div>
         <h3>${i.name}</h3>
         ${i.opt?`<small>${i.opt}</small>`:""}
